@@ -12,7 +12,7 @@ import { SiMongodb } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import pic from "/src/images/png.png"
 
-
+import { motion } from 'framer-motion';
 
 
 
@@ -35,7 +35,7 @@ function Home() {
                 <ReactTyped strings={["Web Designer" ,"Graphic Designer", "Coder"]} className='text-orange-600 font-extrabold font-sans ' loop={true} backSpeed={50} typeSpeed={40} />
 
                 </div>
-                <p className='text-md md:text-md font-sans text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente excepturi iste eligendi totam assumenda commodi itaque unde necessitatibus, distinctio cumque sint, mollitia ut. Vel, illum voluptatibus! Voluptates quisquam ad repellendus.</p>
+                <p className='text-md md:text-md font-sans text-justify mt-4'>I Design, develop, and transform your visions into efficient result-driven digital solutions. I create static and dynamic websites with best-proven technologies. Businesses today have truly realized the power of digital marketing. I offering the most competitive solutions in the sphere of digital marketing, website designing, web development, and graphic designing.</p>
                 <br />
 
                 {/* social media icons */}
@@ -69,8 +69,11 @@ function Home() {
 {/* right side  */}
 
             <div className='md:w-1/2 mt-16 md:ml-48 md:mt-20 order-1'>
-            
+            <div>
+
+           
             <img src={pic} alt="me" className='rounded-e-full  md:w-[450px] md:h-[450px]' />
+            </div>
             </div>
         </div>
     </div>

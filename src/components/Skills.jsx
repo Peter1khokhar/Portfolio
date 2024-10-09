@@ -10,7 +10,7 @@ function About() {
 
         <div className='text-center'>
         <h1 className='text-3xl font-bold mt-6 text-orange-600 font-sans'>My Skills</h1>
-        <p className='font-semibold font-sans'>dyaan se dekh bhai .</p>
+        <p className='font-semibold font-sans'>I have below skills .</p>
         
         </div>
         <br />
@@ -45,7 +45,7 @@ function About() {
         </div>
     </div>
     <br />
-    {/* <hr className='shadow-md ' /> */}
+    <hr className='shadow-md ' />
     </>
   )
 }

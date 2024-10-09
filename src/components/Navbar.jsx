@@ -3,6 +3,7 @@ import pic from "/src/images/peter khokhar.png"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 
 
@@ -32,11 +33,11 @@ function Navbar() {
     ]
   return (
     <>
-    <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md bg-white fixed'>
+    <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md bg-gradient-to-r from-orange-600 to-yellow-300 fixed'>
         <div className='flex justify-between items-center h-16 '>
             <div className='flex space-x-2'>
                 <img src={pic} className='h-14 w-14' alt="me" />
-                <h1 className='font-bold text-xl font-sans cursor-pointer'>Peter Khokhar
+                <h1 className='font-bold text-xl text-white font-sans  cursor-pointer'>Peter Khokhar
                 <p className='text-sm font-sans'>Web Designer</p>
                 </h1>
             </div>
@@ -47,7 +48,7 @@ function Navbar() {
                 <ul className='hidden md:flex space-x-8'>
                     {
                         navItems.map(({id,text}) =>(
-                            <li className='hover:scale-105 font-sans hover:bg-orange-600 hover:text-white p-3 rounded-2xl cursor-pointer duration-200' key={id}>
+                            <li className='hover:scale-105 font-sans hover:bg-gradient-to-r from-orange-300 to-oange-700 hover:text-white p-3 rounded-2xl cursor-pointer duration-200' key={id}>
                                 <Link to={text} 
                                 smooth={true}
                                 duration={500}
@@ -75,7 +76,12 @@ function Navbar() {
 {
     menu &&(
 
-        <div className=' bg-white flex flex-col items-center justify-center h-52 '>
+        <motion.div 
+        initial={{y:'-70vw'}}
+        animate={{y:0}}
+         transition={{delay : 0.1, type:'spring', stiffness: 120}}
+
+        className=' bg-white rounded-b-full shadow-md flex flex-col items-center justify-center h-52 '>
                  <ul className='md:hidden space-y-4'>
                  {
                         navItems.map(({id,text}) =>(
@@ -89,7 +95,7 @@ function Navbar() {
                         ))
                     }
                 </ul>
-        </div>
+        </motion.div>
     )
 }
 

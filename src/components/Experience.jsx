@@ -4,6 +4,7 @@ import tailwindlogo from '/src/images/tailwindlogo.png'
 import database from '/src/images/database.avif'
 import figma from '/src/images/figma.png'
 import javascript from '/src/images/javascript.png'
+// import { motion } from 'framer-motion'
 
 function Experience(){ 
         const cardItem=[
@@ -33,6 +34,8 @@ function Experience(){
             },
             
         ]
+
+
         
         return (
             <>
@@ -48,7 +51,7 @@ function Experience(){
             {/* <div> */}
                 {
                     cardItem.map(({id, logo, name})=> (
-                        <div className='flex flex-col items-center justify-center border-[2px] rounded-full shadow-md cursor-pointer hover:scale-110 duration-200 md:h-[200px] md:w-[200px]'
+                        <div className='flex flex-col items-center justify-center  rounded-full shadow-md cursor-pointer hover:scale-110 duration-200 md:h-[200px] md:w-[200px]'
                          key={id}>
                             <img src={logo} className="w-[150px]  rounded-full" alt="me" />
                             <div className='px-2  font-sans text-xl mb-2'>{name}</div>
@@ -64,6 +67,7 @@ function Experience(){
        
     </div>
     <hr className='shadow-2xl ' />
+    <br /><br />
 
     </>
   )
